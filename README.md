@@ -403,7 +403,7 @@ argocd/argo-helm-prod  https://kubernetes.default.svc  prod       default �
 argocd/argo-helm-test  https://kubernetes.default.svc  test       default  Synced  Healthy  Auto-Prune  <none>      https://github.com/slawekgh/argo-helm  test-chart  
 ```
 
-na GKE jest również zgodnie z założeniami:
+jak widać 3 argo-app się poprawnie zsynchronizowały, zaś na GKE jest również zgodnie z założeniami:
 
 
 ```
