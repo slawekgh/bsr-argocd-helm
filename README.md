@@ -351,7 +351,7 @@ ogólnie tak, ale:
 
 ## czwarte rozwiązanie - zmienne nadpisywane przez argo-aplikacje
 
-do repo https://github.com/slawekgh/argo-helm/tree/main/test-chart dodajemy ponownie generyczny values (values-generic.yaml) który co prawda ma wpisane defaultowe wartości dla replicaCount i dla servicePort ale wg założeń nigdy nie powinny być one użyte :-) :
+do repo https://github.com/slawekgh/argo-helm/tree/main/test-chart dodajemy ponownie generyczny values (values-generic.yaml) który co prawda ma wpisane defaultowe wartości dla replicaCount, servicePort i namespace ale wg założeń nigdy nie powinny one być użyte :-)
 
 ```
 helm-chart-repo$ cat test-chart/values-generic.yaml 
@@ -368,7 +368,7 @@ obraz:
   imagePolicy: Always
 ```
 
-jednak tym razem w tej metodzie zmienne replicaCount, servicePort oraz namespace będziemy nadpisywać 
+nie będą użyte ponieważ w tej metodzie zmienne replicaCount, servicePort oraz namespace będziemy nadpisywać 
 <br>
 
 dostępne opcje dla argo app create:
