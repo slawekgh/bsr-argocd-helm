@@ -351,7 +351,7 @@ ogólnie tak, ale:
 
 ## czwarte rozwiązanie - zmienne nadpisywane przez argo-aplikacje
 
-do repo dodajemy ponownie generyczny values z wpisanymi jakimiś random danymi:
+do repo https://github.com/slawekgh/argo-helm/tree/main/test-chart dodajemy ponownie generyczny values (values-generic.yaml) który co prawda ma wpisane defaultowe wartości dla replicaCount i dla servicePort ale wg założeń nigdy nie powinny być one użyte :-) :
 
 ```
 helm-chart-repo$ cat test-chart/values-generic.yaml 
@@ -607,6 +607,6 @@ od tej pory konfigurację środowiska trzymamy wyłącznie w repo z konfigiem i
 
 celem wprowadzenia tego samego setupu dla TEST i PROD należy stworzyć identyczne repozytoria konfiguracyjne oraz dodać kolejne 2 aplikacje argo wskazujące na te repozytoria 
 
-podejście 5te wydaje się być najlepsze a jedyną jego wadą jest to że jest to jeszcze beta 
+podejście 5te wydaje się być najlepsze a jedyną jego wadą jest to że jest to jeszcze beta , nie jest obecnie wspierana w ARGOCD-WEBGUI oraz w cli (via argocd app create)
 
 
