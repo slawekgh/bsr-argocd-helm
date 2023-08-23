@@ -476,7 +476,7 @@ wady:
 - trzymanie konfiguracji środowiska w parametrach argo-application
 - gdy zmiennych będą dziesiątki oczywiście raczej następujące podejście zupełnie się nie sprawdzi:
 ```
-       argocd app create argo-helm-dev --repo https://github.com/slawekgh/argo-helm --path test-chart --dest-namespace dev --dest-server https://kubernetes.default.svc --auto-prune --sync-policy automated --release-name test-release --values values-generic.yaml --helm-set replicaCount=2 --helm-set servicePort=2222 --helm-set namespace=dev  --helm-set parametr1=xxx  --helm-set parametr2=xxx --helm-set parametr3=xxx --helm-set parametr4=xxx --helm-set parametr5=xxx --helm-set parametr6=xxx--helm-set parametr7=xxx  itd itd 
+       argocd app create argo-helm-dev --repo https://github.com/slawekgh/argo-helm --path test-chart --dest-namespace dev \n --dest-server https://kubernetes.default.svc --auto-prune --sync-policy automated --release-name test-release --values values-generic.yaml --helm-set replicaCount=2 --helm-set servicePort=2222 --helm-set namespace=dev  --helm-set parametr1=xxx  --helm-set parametr2=xxx --helm-set parametr3=xxx --helm-set parametr4=xxx --helm-set parametr5=xxx --helm-set parametr6=xxx--helm-set parametr7=xxx  itd itd 
 ```
 - również nie sprawdzi sie zarządzanie zmianami w konfiguracji w ten sposób:
 ```
